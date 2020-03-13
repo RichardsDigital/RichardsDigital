@@ -26,7 +26,7 @@ nav ul :nth-child(4):hover {
 
 <div class="portfolioElements">
 
-    <div class="portfolioElementBox">
+    <div class="portfolioElementBox" id="pBox1">
         <div class="imageSlider" id="imageSlider1">
             
             <button class="left" name="left" onclick="handleClick(this)">
@@ -149,12 +149,15 @@ nav ul :nth-child(4):hover {
             var parent = e.parentElement.id;
             //Get image within that parent
             var image = document.getElementById(parent).getElementsByTagName('img')[1];
+            //Get arrows
+            var arrowRight1 = document.getElementById(parent).getElementsByTagName('img')[2];
+            var arrowRight2 = document.getElementById(parent).getElementsByTagName('img')[2];
+            var arrowRight3 = document.getElementById(parent).getElementsByTagName('img')[2];
+            var arrowRight4 = document.getElementById(parent).getElementsByTagName('img')[2];
             //Create editable file name
             var imageFile = image.src.slice(0, -5);
 
             var buttonName = e.name;
-
-            console.log(parent);
 
             //Create seperate counter for each class name (for every image div)
 
@@ -164,11 +167,17 @@ nav ul :nth-child(4):hover {
                                 count1++;
                                 editImageFile(count1);
                             }
+                            if (count1 === 3) {
+                                arrowRight1.style.opacity = '10%';
+                            }
                         }
                         if (buttonName === 'left') {
                             if (count1 > 1) {
                                 count1--;
                                 editImageFile(count1);
+                            }
+                            if (count1 < 3) {
+                                arrowRight1.style.opacity = '20%';
                             }
                         }
                 }
@@ -179,11 +188,17 @@ nav ul :nth-child(4):hover {
                                 count2++;
                                 editImageFile(count2);
                             }
+                            if (count2 === 3) {
+                                arrowRight2.style.opacity = '10%';
+                            }
                         }
                         if (buttonName === 'left') {
                             if (count2 > 1) {
                                 count2--;
                                 editImageFile(count2);
+                            }
+                            if (count2 < 3) {
+                                arrowRight2.style.opacity = '20%';
                             }
                         }
                 }
@@ -194,11 +209,17 @@ nav ul :nth-child(4):hover {
                                 count3++;
                                 editImageFile(count3);
                             }
+                            if (count3 === 4) {
+                                arrowRight3.style.opacity = '10%';
+                            }
                         }
                         if (buttonName === 'left') {
                             if (count3 > 1) {
                                 count3--;
                                 editImageFile(count3);
+                            }
+                            if (count3 < 4) {
+                                arrowRight3.style.opacity = '20%';
                             }
                         }
                 }
@@ -209,11 +230,17 @@ nav ul :nth-child(4):hover {
                                 count4++;
                                 editImageFile(count4);
                             }
+                            if (count4 === 3) {
+                                arrowRight4.style.opacity = '10%';
+                            }
                         }
                         if (buttonName === 'left') {
                             if (count4 > 1) {
                                 count4--;
                                 editImageFile(count4);
+                            }
+                            if (count4 < 3) {
+                                arrowRight4.style.opacity = '20%';
                             }
                         }
                 }
