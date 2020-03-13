@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Header and Footer ---------------------------------------- */
+
+/* Navbar */
+
+.navspace {
+    height: 47px;
+}
+
+.carrier {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+.slider {
+    position: relative;
+}
+
+nav {
+    background-color: white;
+    position: fixed;
+    display: flex;
+    height: 47px;
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+}
+
+.undernav {
+    position: fixed;
+    display: grid;
+    width: 100%;
+    top: 44px;
+    height: 3px;
+    grid-template-columns: 30px 1fr 120px 120px 120px 120px 10% 60px 60px 30px;
+    z-index: 2;
+}
+
+@keyframes navslide {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.undernav div {
+    border-bottom: 3px solid #212121;
+    justify-self: center;
+    width: 80%;
+    animation: navslide 0.5s;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 30px 1fr 120px 120px 120px 120px 10% 60px 60px 30px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+nav ul a {
+    opacity: 50%;
+    padding-top: 12px;
+}
+nav ul a:hover {
+    opacity: 80%;
+}
+
+nav ul :nth-child(1) {
+    height: 24px;
+    grid-column: 2/3;
+    justify-self: left;
+}
+
+nav ul :nth-child(n+3) {
+    height: 30px;
+}
+
+nav ul :nth-child(n+7) {
+    height: 22px;
+    justify-self: right;
+}
+
+.sidenav {
+    position: fixed;
+    background-color: #212121;
+    top: 47px;
+    right: 0;
+    width: 0;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s;
+    overflow-x: hidden
+}
+
+.list {
+    padding-top: 20px;
+}
+
+.sidenav a {
+    color: white;
+    font-size: 14px;
+    opacity: 100%;
+    padding: 20px 0 20px 0;
+    margin-left: 40px;
+    width: 300px;
+    opacity: 50%;
+}
+
+.sidenav .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav .socialIconsSN {
+    position: absolute;
+    display: flex;
+    top: 300px;
+    margin-left: 25px;
+}
+.socialIconsSN img {
+    width: 22px;
+    padding: 0 16px;
+}
+
+.contactInfoBoxSN {
+    position: relative;
+    padding: 30px;
+    padding-left: 40px;
+    top: 120px;
+    width: 180px;
+}
+.contactInfoBoxSN p {
+    color: white;
+    font-size: 14px;
+}
+.contactInfoBoxSN img {
+    width: 16px;
+}
+.contactInfoBoxSN .phoneNumberBox {
+    display: flex;
+    padding: 15px 0;
+}
+.contactInfoBoxSN .phoneNumberBox img {
+    padding-right: 15px;
+}
+.contactInfoBoxSN .emailBox {
+    display: flex;
+}
+.contactInfoBoxSN .emailBox img {
+    padding-right: 15px;
+}
+
+.contactInfoBoxSN .copyright {
+    font-size: 12px;
+    position: relative;
+    opacity: 40%;
+    bottom: 30px;
+    top: 80px;
+}
+
+.allElements {
+    opacity: 100%;
+    transition: 0.25s;
+}
+
+/* Desktop nav additional settings */
+
+@media only screen and (min-width: 992px) {
+    .hamburger {
+        display: none;
+    }
+    .sidenav {
+        display: none;
+    }
+}
+
+/* Mobile nav screen settings */
+
+@media only screen and (max-width: 991px) {
+    nav ul :nth-child(n+3) {
+        display: none;
+    }
+    .undernav {
+        display: none;
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 30px 1fr 1fr 30px;
+        width: 100%;
+    }
+    .hamburger {
+        width: 30px;
+        grid-column: 3/4;
+        justify-self: right;
+        align-self: center;
+    }
+    nav ul :nth-child(1) {
+        grid-column: 2/3;
+    }
+    footer {
+        display: none;
+    }
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    height: 300px;
+    background-color: #212121;
+}
+
+footer p {
+    color: white;
+}
+
+.contactInfoBox {
+    padding: 30px;
+}
+
+.contactInfoBox img {
+    width: 16px;
+}
+.contactInfoBox .phoneNumberBox {
+    display: flex;
+    padding: 15px 0;
+}
+.contactInfoBox .phoneNumberBox img {
+    padding-right: 10px;
+}
+.contactInfoBox .emailBox {
+    display: flex;
+}
+.contactInfoBox .emailBox img {
+    padding-right: 10px;
+}
+
+.socialMediaIcons {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.socialMediaIcons img {
+    width: 22px;
+    padding: 0 16px;
+}
+.socialMediaIcons :nth-child(3) {
+    padding: 0 30px 0 17px;
+}
+
+.contactInfoBox .copyright {
+    font-size: 14px;
+    position: absolute;
+    opacity: 40%;
+    bottom: 30px;
+}
+
+/* -------------------------------------------- */
+
+/* colour pallete */
+
+/* 
+Blue #0f4c81
+pink #ed6663
+black #212121
+grey #eaeaea 
+*/
+
+/* Common Styling */
+
+h1, h2, h3, h4, p, a, button {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+a {
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+button {
+    color: white;
+    font-size: 14px;
+    background-color: #0f4c81;
+    padding: 6px 50px;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* Textbox Preset */
+
+@media only screen and (min-width: 701px) {
+    .header-textbox {
+        width: 90%;
+    }
+    .header-textbox h2 {
+        font-size: 20px;
+    }
+    .header-textbox h3 {
+        font-size: 16px;
+    }
+    .header-textbox p {
+        padding-top: 12px;
+    } 
+}
+
+@media only screen and (max-width: 700px) {
+    .header-textbox {
+        width: 100%;
+    }
+    .header-textbox p {
+        padding-top: 12px;
+    } 
+}
+
+/* ---------------- */
+
+/* Home ----------------------------------------------------------------------------------------- */
+
+
+
+/* Introduction Section ------------------------------------------------ */
+
+/* Desktop Screen Settings */
+@media only screen and (min-width: 701px) {
+
+.introduction {
+    background-color: #eaeaea;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro-img {
+    position: relative;
+    justify-self: center;
+    grid-column: 1/2;
+    padding: 30px;
+    width: 90%;
+    align-self: center;
+}
+
+.intro-vector {
+    width: 100%;
+    grid-column: 1/2;
+}
+
+.intro-text {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    grid-column: 2/3;
+    padding: 50px 0 80px 60px
+}
+
+.intro-textbox2 {
+    padding-top: 30px;
+}
+.intro-textbox2 button {
+    margin-top: 12px;
+}
+}
+
+/* Mobile Screen Settings */
+@media only screen and (max-width: 700px) {
+    
+    .introduction {
+        background-color: #eaeaea;
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 1;
+    }
+    .intro-text h2 {
+        font-size: 20px;
+        top: 0;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .intro-img {
+        position: relative;
+        width: 90%;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        justify-self: center;
+        align-self: center;
+        padding: 20px 0;
+    }
+    .intro-vector {
+        width: 100%;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .intro-text {
+        justify-self: center;
+        align-self: center;
+        padding: 20px 0 0 0;
+    }
+
+    .intro-text p {
+        display: none;
+    }
+    .intro-textbox2 {
+        display: none;
+    }
+}
+
+/* Features Section ------------------------------------------------*/
+
+/* Desktop Screen Settings */
+@media only screen and (min-width: 701px) {
+
+    .boxlinespacing1, .boxlinespacing2 {
+        display: none;
+    }
+
+    .features {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 28% 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 15px;
+        margin-bottom: 60px;
+    }
+    
+    .features img {
+        width: 80%;
+        padding: 15px 15px;
+    }
+    
+    .features .img-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .features .img-2 {
+        width: 60%;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    
+    }
+    .features .img-3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    .features-textbox1, .features-textbox2 {
+        grid-column: 2/3;
+        align-self: center;
+        width: 80%;
+        padding-bottom: 15px;
+    }
+    
+    .features .features-textbox3 {
+        grid-column: 2/3;
+        align-self: center;
+        width: 80%;
+    }
+}
+
+/* Mobile Screen Settings */
+@media only screen and (max-width: 700px) {
+
+    .features {
+        display: grid;
+        background-color: white;
+        grid-template-rows: 8;
+    }
+    
+    .features img {
+        width: 60%;
+        align-self: center;
+        justify-self: center;
+        padding: 30px 0;
+    }
+    
+    .features .img-1 {
+        grid-row: 1/2;
+    }
+    
+    .features-textbox1 {
+        grid-row: 2/3;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .boxlinespacing1 {
+        grid-row: 3/4;
+        width: 350px;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-top: 15px;
+        justify-self: center;
+    }
+
+    .features .img-2 {
+        grid-row: 4/5;
+    }
+
+    .features-textbox2 {
+        grid-row: 5/6;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        width: 90%;
+    } 
+
+    .boxlinespacing2 {
+        grid-row: 6/7;
+        width: 350px;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-top: 15px;
+        justify-self: center;
+    }
+
+    .features .img-3 {
+        grid-row: 7/8;
+    }
+
+    .features-textbox3 {
+        grid-row: 8/9;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        width: 90%;
+        padding-bottom: 60px;
+    } 
+
+}
+
+/* Portfolio ------------------------------------------------------------------------------------- */
+
+.portfolioElements {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.portfolioElementBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #eaeaea;
+    padding: 30px;
+}
+.imageSlider {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    width: 100%;
+}
+
+.imageSlider .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    background-color: #cccccc;
+}
+.imageSlider .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/4;
+    background-color: #cccccc;
+}
+
+.imageSlider .left img, .imageSlider .right img {
+    height: 18px;
+    width: 18px;
+    opacity: 20%;
+}
+
+.left:active {
+    background-color: #b3b2b2;
+}
+
+.right:active {
+    background-color: #b3b2b2;
+}
+
+.imageSlider .imagebox {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+}
+.imageSlider img {
+    width: 100%;
+    height: 100%;
+}
+
+.imageSlider .left, .imageSlider .right {
+color: none;
+font-size: 0;
+padding: 0;
+border-radius: 0;
+height: 100%;
+width: 100%;
+outline: none;
+box-shadow: none;
+border: none;
+}
+
+.portfolio-textbox1 p {
+    padding-bottom: 20px;
+}
+
+.portfolio-textbox1 {
+    grid-column: 2/3;
+    align-self: top;
+    justify-self: center;
+    width: 90%;
+}
+

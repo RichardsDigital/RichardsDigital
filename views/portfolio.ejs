@@ -1,0 +1,234 @@
+<%- include("partials/header.ejs") %>
+
+<div class="navspace"></div>
+
+<div class="carrier">
+    <div class="slider">
+
+<style>
+.undernav div {
+    grid-column: 4/5;
+}
+nav ul :nth-child(4) {
+    opacity: 100%;
+}
+nav ul :nth-child(4):hover {
+    opacity: 100%;
+}
+.list :nth-child(2){
+    opacity: 100%;
+}
+</style>
+
+<section class="portfolio">
+
+<h2 style="padding: 30px;">Portfolio</h2>
+
+<div class="portfolioElements">
+
+    <div class="portfolioElementBox">
+        <div class="imageSlider" id="imageSlider1">
+            
+            <button class="left" name="left" onclick="handleClick(this)">
+                <img class="leftArrow" src="images/icons/leftArrow.png" alt="">
+            </button>
+            
+                <div class="imagebox">
+                    <img src="images/portfolio-images/clothing/page1.png" alt="">
+                </div>
+            
+            <button class="right" name="right" onclick="handleClick(this)">
+                <img class="rightArrow" src="images/icons/rightArrow.png" alt="">
+            </button>
+            
+        </div>  
+        <div class="header-textbox portfolio-textbox1">
+            <h3>Ivy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Justo eget magna fermentum iaculis eu non. Suspendisse in est ante in.
+               Ut eu sem integer vitae justo.</p>
+               <button>Visit Site</button>
+        </div>
+    </div>
+
+    <div class="portfolioElementBox">
+        <div class="imageSlider" id="imageSlider2">
+            
+            <button class="left" name="left" onclick="handleClick(this)">
+                <img class="leftArrow" src="images/icons/leftArrow.png" alt="">
+            </button>
+            
+                <div class="imagebox">
+                    <img src="images/portfolio-images/personal-trainer/page1.png" alt="">
+                </div>
+            
+            <button class="right" name="right" onclick="handleClick(this)">
+                <img class="rightArrow" src="images/icons/rightArrow.png" alt="">
+            </button>
+            
+        </div>  
+        <div class="header-textbox portfolio-textbox1">
+            <h3>Ivy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Justo eget magna fermentum iaculis eu non. Suspendisse in est ante in.
+               Ut eu sem integer vitae justo.</p>
+               <button>Visit Site</button>
+        </div>
+    </div>
+
+    <div class="portfolioElementBox">
+        <div class="imageSlider" id="imageSlider3">
+            
+            <button class="left" name="left" onclick="handleClick(this)">
+                <img class="leftArrow" src="images/icons/leftArrow.png" alt="">
+            </button>
+            
+                <div class="imagebox">
+                    <img src="images/portfolio-images/cafe/page1.png" alt="">
+                </div>
+            
+            <button class="right" name="right" onclick="handleClick(this)">
+                <img class="rightArrow" src="images/icons/rightArrow.png" alt="">
+            </button>
+            
+        </div>  
+        <div class="header-textbox portfolio-textbox1">
+            <h3>Ivy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Justo eget magna fermentum iaculis eu non. Suspendisse in est ante in.
+               Ut eu sem integer vitae justo.</p>
+               <button>Visit Site</button>
+        </div>
+    </div>
+
+    <div class="portfolioElementBox">
+        <div class="imageSlider" id="imageSlider4">
+            
+            <button class="left" name="left" onclick="handleClick(this)">
+                <img class="leftArrow" src="images/icons/leftArrow.png" alt="">
+            </button>
+            
+                <div class="imagebox">
+                    <img src="images/portfolio-images/massage/page1.png" alt="">
+                </div>
+            
+            <button class="right" name="right" onclick="handleClick(this)">
+                <img class="rightArrow" src="images/icons/rightArrow.png" alt="">
+            </button>
+            
+        </div>  
+        <div class="header-textbox portfolio-textbox1">
+            <h3>Ivy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Justo eget magna fermentum iaculis eu non. Suspendisse in est ante in.
+               Ut eu sem integer vitae justo.</p>
+               <button>Visit Site</button>
+        </div>
+    </div>
+
+    <script>
+
+        //The clicked button will carry its parent index, aswell as the button name.
+
+        //Then the function will ask for the parent index to find the img index within it.
+
+        //Seperate variable numbers will handle each parent.
+
+        var count1 = 1;
+        var count2 = 1;
+        var count3 = 1;
+        var count4 = 1;
+        
+        function handleClick(e) {
+
+            //Get parent of clicked button
+            var parent = e.parentElement.id;
+            //Get image within that parent
+            var image = document.getElementById(parent).getElementsByTagName('img')[1];
+            //Create editable file name
+            var imageFile = image.src.slice(0, -5);
+
+            var buttonName = e.name;
+
+            console.log(parent);
+
+            //Create seperate counter for each class name (for every image div)
+
+                if (parent === 'imageSlider1') {
+                        if (buttonName === 'right') {
+                            if (count1 < 3) {
+                                count1++;
+                                editImageFile(count1);
+                            }
+                        }
+                        if (buttonName === 'left') {
+                            if (count1 > 1) {
+                                count1--;
+                                editImageFile(count1);
+                            }
+                        }
+                }
+
+                if (parent === 'imageSlider2') {
+                    if (buttonName === 'right') {
+                            if (count2 < 3) {
+                                count2++;
+                                editImageFile(count2);
+                            }
+                        }
+                        if (buttonName === 'left') {
+                            if (count2 > 1) {
+                                count2--;
+                                editImageFile(count2);
+                            }
+                        }
+                }
+
+                if (parent === 'imageSlider3') {
+                    if (buttonName === 'right') {
+                            if (count3 < 4) {
+                                count3++;
+                                editImageFile(count3);
+                            }
+                        }
+                        if (buttonName === 'left') {
+                            if (count3 > 1) {
+                                count3--;
+                                editImageFile(count3);
+                            }
+                        }
+                }
+
+                if (parent === 'imageSlider4') {
+                    if (buttonName === 'right') {
+                            if (count4 < 3) {
+                                count4++;
+                                editImageFile(count4);
+                            }
+                        }
+                        if (buttonName === 'left') {
+                            if (count4 > 1) {
+                                count4--;
+                                editImageFile(count4);
+                            }
+                        }
+                }
+
+                function editImageFile(count) {
+                    var updatedImage = imageFile + count + '.png';
+                    image.src = updatedImage;
+                }
+        }
+
+    </script>
+</div>
+
+</section>
+
+<%- include("partials/footer.ejs") %>
+</div>
+</div>

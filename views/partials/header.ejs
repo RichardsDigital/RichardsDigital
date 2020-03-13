@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="images/Richards-Digital-logo.png" alt="">
+            <img class="hamburger" src="images/icons/menu.png" alt="">
+            <a href="/">Home</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/getting-started">Getting Started</a>
+            <a href="/contact">Contact</a>
+            <img src="images/icons/linkedin1.png" alt="">
+            <img src="images/icons/facebook1.png" alt="">
+            <img src="images/icons/instagram1.png" alt="">
+        </ul>
+    </nav>
+
+    <div class="undernav">
+        <div></div>
+    </div>
+
+    <div class="sidenav"> 
+
+        <div class="allElements">
+
+        <div class="list">
+        <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/getting-started">Getting Started</a>
+        <a href="/contact">Contact</a>
+        </div>
+
+        <div class="socialIconsSN">
+            <img src="images/icons/linkedin2.png" alt="">
+            <img src="images/icons/facebook2.png" alt="">
+            <img src="images/icons/instagram2.png" alt="">
+        </div>
+
+        <div class="contactInfoBoxSN">
+
+            <p>Contact Info</p>
+    
+            <div class="phoneNumberBox">
+                <img src="images/icons/phone.png" alt="">
+                <p>07746557322</p>
+            </div>
+    
+            <div class="emailBox">
+                <img src="images/icons/mail.png" alt="">
+                <p>RichardsDigital.Info@gmail.com</p>
+            </div>
+    
+        <p class="copyright">
+            © 2020 Richards Digital.
+        </p>
+    
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+            var isOpen = false;
+            
+            function openNav(carrier, sidenav) {
+
+                carrier.style.left = '-340px';
+                carrier.style.right = '340px';
+                sidenav.style.width = '340px';
+                
+                document.getElementsByClassName('allElements')[0].style.opacity = '100%';
+            }
+
+            function closeNav(carrier, sidenav) {
+                
+                carrier.style.left = '0';
+                carrier.style.right = '0';
+                sidenav.style.width = '0';
+                document.getElementsByClassName('allElements')[0].style.opacity = '0';
+            }
+        
+        document.getElementsByClassName('hamburger')[0].addEventListener('click', () => {
+
+            var carrier = document.getElementsByClassName('carrier')[0];
+            var sidenav = document.getElementsByClassName('sidenav')[0];
+
+            if (isOpen === false) {
+                openNav(carrier, sidenav);
+                isOpen = true;
+            } 
+            else {
+                closeNav(carrier, sidenav);
+                isOpen = false;
+            }
+        });
+        
+    </script>
