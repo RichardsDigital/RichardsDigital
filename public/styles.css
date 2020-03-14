@@ -333,8 +333,6 @@ button {
 
 /* Home ----------------------------------------------------------------------------------------- */
 
-
-
 /* Introduction Section ------------------------------------------------ */
 
 /* Desktop Screen Settings */
@@ -642,6 +640,10 @@ button {
 
 @media only screen and (max-width: 700px) {
 
+    .header {
+        display: none;
+    }
+
     .portfolio-textbox1 h3, .portfolio-textbox2 h3, .portfolio-textbox3 h3 {
         display: none;
     }
@@ -741,5 +743,250 @@ button {
     
     .portfolio-textbox1 p {
         padding-bottom: 20px;
+    }
+}
+
+/* Getting Started ------------------------------------------------------------------------------- */
+
+/* Desktop Screen Settings */
+
+@media only screen and (min-width: 701px) {
+
+    .next-steps-textbox h3 {
+        display: none;
+    }
+
+    .textBox h4 {
+        display: none;
+    }
+
+    .mobile-header-title {
+        display: none;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .getting-started {
+        display: grid;
+        grid-template-rows: 1 1 1;
+    }
+
+    .sectionOne {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #eaeaea;
+        padding: 30px;
+    }
+
+    .sectionOne img {
+        justify-self: right;
+        grid-column: 2/3;
+        width: 90%;
+        align-self: center;
+    }
+
+    .getting-started-textbox {
+        grid-column: 1/2;
+    }
+
+    .sectionTwo {
+        padding-bottom: 75px;
+    }
+
+    .our-process-textbox {
+        padding: 30px;
+    }
+
+    .sectionTwoContainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .textBoxOne, .textBoxTwo, .textBoxThree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0 15px 30px;
+    }
+
+    .textBox {
+        align-self: top;
+    }
+
+    .textBoxOne img, .textBoxTwo img, .textBoxThree img {
+        justify-self: center;
+        align-self: center;
+        grid-column: 2/3;
+        width: 300px
+    }
+    .textBoxTwo img {
+        width: 100px
+    }
+
+    .sectionThree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #eaeaea;
+        padding-bottom: 55px;
+    }
+
+    .next-steps-textbox {
+        padding: 30px;
+    }
+
+    .buttonArea {
+        display: flex;
+        align-items: center;
+    }
+    .buttonArea button {
+        margin-left: 20%;
+    }
+}
+
+/* Mobile Screen Settings */
+
+@media only screen and (max-width: 700px) {
+
+    .desktop-img {
+        display: none;
+    }
+
+    .getting-started-textbox h2, .our-process-textbox h2 {
+        display: none;
+    }
+
+    /* Gettings Started */
+
+    .mobile-header-title {
+        padding: 15px 30px;
+    }
+
+    .getting-started {
+        display: grid;
+        grid-template-rows: 1 1 1;
+    }
+
+    /* Section One */
+
+    .getting-started-textbox {
+        grid-row: 3/4;
+        align-items: center;
+    }
+
+    .getting-started-textbox p {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .sectionOne {
+        display: grid;
+        grid-template-rows: 1 1 1;
+        background-color: #eaeaea;
+        padding-bottom: 30px;
+    }
+
+    .sectionOne img {
+        justify-self: center;
+        align-self: center;
+        grid-row: 2/3;
+        width: 90%;
+    }
+
+    /* Section Two */
+
+    .sectionTwo {
+        padding-bottom: 15px;
+    }
+
+    .sectionTwoContainer {
+        display: grid;
+        grid-template-rows: 1 1 1;
+    }
+
+    .textBox {
+        display: grid;
+        grid-template-rows: 1 1 1;
+    }
+
+    .textBox {
+        align-self: center;
+        width: 100%;
+    }
+
+    .textBox h3 {
+        display: none;
+    }
+
+    .textBox h4, .textBox p {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .mobile-img {
+        justify-self: center;
+        align-self: center;
+        grid-row: 2/3;
+        width: 300px
+    }
+
+    .textBoxTwo img {
+        width: 100px
+    }
+
+    .textBoxOne, .textBoxTwo {
+        display: grid;
+    }
+
+    .step-underline {
+        height: 2px;
+        width: 80%;
+        background-color: #212121;
+        justify-self: center;
+        align-self: center;
+        opacity: 20%;
+        margin: 15px;
+    }
+
+    /* Bottom */
+
+    .next-steps-textbox h2 {
+        display: none;
+    }
+
+    .sectionThree {
+        display: grid;
+        grid-template-rows: 1 1 1;
+        background-color: #eaeaea;
+    }
+
+    .next-steps-textbox h3, .next-steps-textbox p {
+        text-align: center;
+        align-self: center;
+    }
+
+    .next-steps-textbox h3 {
+        padding-top: 15px;
+    }
+
+    .next-steps-textbox p {
+        padding: 7.5px 15px;
+    }
+
+    .next-step-underline {
+        height: 2px;
+        width: 50%;
+        background-color: #212121;
+        justify-self: center;
+        align-self: center;
+        opacity: 20%;
+        margin: 15px;
+    }
+
+    .buttonArea {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 60px;
     }
 }
