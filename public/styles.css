@@ -756,6 +756,13 @@ button {
         display: none;
     }
 
+    .next-step-underline {
+        display: none;
+    }
+    .step-underline {
+        display: none;
+    }
+
     .textBox h4 {
         display: none;
     }
@@ -836,6 +843,7 @@ button {
     }
 
     .buttonArea {
+        grid-column: 2/3;
         display: flex;
         align-items: center;
     }
