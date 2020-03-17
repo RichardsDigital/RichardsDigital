@@ -25,11 +25,11 @@ nav ul :nth-child(6):hover {
         <div class="left-side">
             <h2 class="header-textbox">Get in touch</h2>
             <div class="inner-contact-box">
-                <form action="text" method="POST">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea rows="20" cols="40" placeholder="Message"></textarea>
-                    <button type="submit"><h4>Send</h4></button>
+                <form action="/contact" method="POST">
+                    <input type="text" name="mail" placeholder="Email">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea rows="20" cols="40" name="message" placeholder="Message"></textarea>
+                    <button type="submit" name="submit"><h4>Send</h4></button>
                 </form>
             </div>
         </div>
