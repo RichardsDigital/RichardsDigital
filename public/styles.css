@@ -5,6 +5,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.scrollContainer {
+    height: 100%;
+    width: 100%;
+}
+
 /* Header and Footer ---------------------------------------- */
 
 /* Navbar */
