@@ -168,11 +168,6 @@ nav ul :nth-child(n+7) {
     top: 80px;
 }
 
-.allElements {
-    opacity: 100%;
-    transition: 0.25s;
-}
-
 /* Desktop nav additional settings */
 
 @media only screen and (min-width: 992px) {
@@ -180,6 +175,9 @@ nav ul :nth-child(n+7) {
         display: none;
     }
     .sidenav {
+        display: none;
+    }
+    .whiteSpace {
         display: none;
     }
 }
@@ -209,6 +207,9 @@ nav ul :nth-child(n+7) {
     }
     footer {
         display: none;
+    }
+    .whiteSpace {
+        display: initial;
     }
 }
 
@@ -347,7 +348,19 @@ button:hover {
 /* ---------------- */
 
 /* Home ----------------------------------------------------------------------------------------- */
-
+@keyframes flowRight {
+    0% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 0%;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
 /* Desktop Screen Settings */
 @media only screen and (min-width: 701px) {
 
@@ -391,20 +404,6 @@ button:hover {
     width: 100%;
     grid-column: 1/2;
     animation: flowRight 1.2s;
-}
-
-@keyframes flowRight {
-    0% {
-        opacity: 0%;
-    }
-    30% {
-        opacity: 0%;
-        transform: translateX(-60px);
-    }
-    100% {
-        opacity: 100%;
-        transform: translateX(0);
-    }
 }
 
 .intro-text {
@@ -502,6 +501,19 @@ button:hover {
 /* Mobile Screen Settings */
 @media only screen and (max-width: 700px) {
 
+    #para1, #para2, #para3, #step1, #step2, #step3, #portPara1, #portPara2, #portPara3 {
+        opacity: 0;
+        transform: translateY(7.5px);
+        transition: 0.8s;
+    }
+    
+    #para1.appear, #para2.appear, #para3.appear, 
+    #step1.appear, #step2.appear, #step3.appear,
+    #portPara1.appear, #portPara2.appear, #portPara3.appear {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
     .slider-panel {
         display: none;
     }
@@ -517,6 +529,7 @@ button:hover {
         grid-row: 1/2;
         grid-column: 1/2;
         padding-top: 15px;
+        animation: flowRight 1.2s;
     }
     .intro-text {
         justify-self: center;
@@ -536,6 +549,9 @@ button:hover {
         width: 100%;
         grid-row: 2/3;
         grid-column: 1/2;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.2s;
     }
 
     .intro-text p {
@@ -560,6 +576,9 @@ button:hover {
     
     .features .img-1 {
         grid-row: 1/2;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.4s;
     }
 
     .features-textbox1 {
@@ -568,6 +587,9 @@ button:hover {
         justify-self: center;
         text-align: center;
         width: 90%;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.4s;
     }
 
     .boxlinespacing1 {
@@ -581,6 +603,9 @@ button:hover {
 
     .features .img-2 {
         grid-row: 4/5;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.6s;
     }
 
     .features-textbox2 {
@@ -589,6 +614,9 @@ button:hover {
         justify-self: center;
         text-align: center;
         width: 90%;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.6s;
     } 
 
     .boxlinespacing2 {
@@ -602,6 +630,9 @@ button:hover {
 
     .features .img-3 {
         grid-row: 7/8;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.8s;
     }
 
     .features-textbox3 {
@@ -611,6 +642,9 @@ button:hover {
         text-align: center;
         width: 90%;
         padding-bottom: 60px;
+        animation: flowRight 1.2s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.8s;
     } 
 }
 
@@ -633,10 +667,10 @@ button:hover {
         grid-template-columns: 1fr 1fr;
         padding: 30px;
         background-color: white;
-        transition: 0.4s ease-out;
+        transition: 0.8s ease-out;
     }
     .portfolioElementBox.fade-in {
-        background-color: #eaeaea;
+        background-color: #e4e4e4;
     }
 
     .imageSlider {
@@ -714,6 +748,10 @@ button:hover {
 
 @media only screen and (max-width: 700px) {
 
+    .whiteSpace {
+        display: none;
+    }
+
     .header {
         display: none;
     }
@@ -732,11 +770,11 @@ button:hover {
         grid-template-columns: 1;
         padding: 30px 30px;
         background-color: white;
-        transition: 0.4s ease-out;
+        transition: 0.8s ease-out;
     }
 
     .portfolioElementBox.fade-in-mobile {
-        background-color: #eaeaea;
+        background-color: #e4e4e4;
     }
 
     .mobileTitle {
@@ -880,7 +918,6 @@ button:hover {
         width: 90%;
         align-self: center;
         animation: flowRight 1.2s;
-        animation-delay: 0.2s;
         animation-fill-mode: backwards;
     }
 
@@ -981,6 +1018,7 @@ button:hover {
 
     .mobile-header-title {
         padding: 30px 30px 0 30px;
+        animation: flowRight 1.2s;
     }
 
     .getting-started {
@@ -998,6 +1036,9 @@ button:hover {
     .getting-started-textbox p {
         text-align: center;
         padding: 30px 15px;
+        animation: flowRight 1.2s;
+        animation-delay: 0.4s;
+        animation-fill-mode: backwards;
     }
 
     .sectionOne {
@@ -1013,9 +1054,18 @@ button:hover {
         grid-row: 2/3;
         width: 90%;
         padding-top: 30px;
+        animation: flowRight 1.2s;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
     }
 
     /* Section Two */
+
+    .our-process-textbox {
+        animation: flowRight 1.2s;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+    }
 
     .sectionTwo {
         padding-bottom: 15px;
@@ -1029,6 +1079,22 @@ button:hover {
     .textBox {
         display: grid;
         grid-template-rows: 1 1 1;
+    }
+
+    .textBoxOne {
+        animation: flowRight 1.2s;
+        animation-delay: 0.8s;
+        animation-fill-mode: backwards;
+    }
+    .textBoxTwo {
+        animation: flowRight 1.2s;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
+    .textBoxThree {
+        animation: flowRight 1.2s;
+        animation-delay: 1.2s;
+        animation-fill-mode: backwards;
     }
 
     .textBox {

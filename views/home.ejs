@@ -64,7 +64,7 @@ nav ul :nth-child(3):hover {
 
     <div class="header-textbox features-textbox1">
         <h3>Custom Design.</h3>
-        <p> 
+        <p id="para1"> 
             We prioritise the visual presence of all the websites that we make, 
             and we make use of the best multimedia creative software’s to achieve this. 
             Having excellent visual presentation is key for not only showing professionalism in your business, 
@@ -72,22 +72,22 @@ nav ul :nth-child(3):hover {
         </p>
     </div>
 
-    <div class="boxlinespacing1"></div>
+    <!-- <div class="boxlinespacing1"></div> -->
 
     <div class="header-textbox features-textbox2">
         <h3>Mobile Optimised.</h3>
-        <p>
+        <p id="para2">
             Your website is likely to be viewed on multiple devices such as mobile phones, 
             tablets, laptops and desktop computers. And alike many professional responsive websites, 
             we will ensure that yours looks remarkable on all devices.
         </p>
     </div>
 
-    <div class="boxlinespacing2"></div>
+    <!-- <div class="boxlinespacing2"></div> -->
 
     <div class="header-textbox features-textbox3">
         <h3>Hosting and Maintenance.</h3>
-        <p>
+        <p id="para3">
             We make certain that your website is hosted with the best service provider, 
             enabling proficiency and speed to top your websites overall performance. 
             We will also be alongside you offering support in terms of maintenance, 
@@ -96,6 +96,38 @@ nav ul :nth-child(3):hover {
     </div>
     
 </section>
+
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+            var controller = new ScrollMagic.Controller();
+    
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.img-1',
+                duration: '53.3%'
+            })
+            .setClassToggle('#para1', 'appear')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.img-2',
+                duration: '56.6%'
+            })
+            .setClassToggle('#para2', 'appear')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.img-3',
+            })
+            .setClassToggle('#para3', 'appear')
+            // .addIndicators({
+            //     name: 'fade scene',
+            //     colorTrigger: 'black',
+            //     indent: 200,
+            //     colorStart: 'blue'
+            // })
+            .addTo(controller);
+        });
+</script>
 
 <%- include("partials/footer.ejs") %>
 

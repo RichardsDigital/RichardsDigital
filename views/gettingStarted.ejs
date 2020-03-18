@@ -31,7 +31,7 @@ nav ul :nth-child(5):hover {
             <p>
                 Once you have settled on your idea, we will do the rest. 
                 Throughout our basic and friendly process you will have your own website designed, 
-                built and hosted without any hassle. <br>
+                built and hosted without any hassle.
                 Our prices vary depending on your request in terms of the size and functionality of your desired website, 
                 however we strive to produce the best content within your budget, 
                 all of which will be discussed in the early stages before we get started.
@@ -52,7 +52,7 @@ nav ul :nth-child(5):hover {
                     <h3>Step 1</h3>
                     <h4>Step 1</h4>
                     <img class="mobile-img" src="images/Untitled-6.png" alt="">
-                        <p>
+                        <p id="step1">
                             Once an idea is put into place, 
                             we will design and share with you our custom made templates 
                             that we feel will best suite your business model, 
@@ -62,7 +62,7 @@ nav ul :nth-child(5):hover {
                 </div>
                 <img class="desktop-img" src="images/Untitled-6.png" alt="">
 
-                <div class="step-underline"></div>
+                <!-- <div class="step-underline"></div> -->
 
             </div>
 
@@ -71,7 +71,7 @@ nav ul :nth-child(5):hover {
                     <h3>Step 2</h3>
                     <h4>Step 2</h4>
                     <img class="mobile-img" src="images/Untitled-7.png" alt="">
-                        <p>
+                        <p id="step2">
                             Now you have a clear vision of what your website will look like, 
                             we can begin building the architecture and software that will operate behind the scenes of your website. 
                             This process will be the making of the UI experience and overall functionality based on your requirements.
@@ -79,7 +79,7 @@ nav ul :nth-child(5):hover {
                 </div>
                 <img class="desktop-img" src="images/Untitled-7.png" alt="">
 
-                <div class="step-underline"></div>
+                <!-- <div class="step-underline"></div> -->
 
             </div>
 
@@ -88,7 +88,7 @@ nav ul :nth-child(5):hover {
                     <h3>Step 3</h3>
                     <h4>Step 3</h4>
                     <img class="mobile-img" src="images/Untitled-8.png" alt="">
-                        <p>
+                        <p id="step3">
                             We will host your website on our local server so you can explore and 
                             identify possible changes that you might want to make, 
                             once you are satisfied with the results, we can then complete the 
@@ -124,6 +124,33 @@ nav ul :nth-child(5):hover {
         </div>
     </div>
 </section>
+
+<script>
+         document.addEventListener("DOMContentLoaded", () => {
+            var controller = new ScrollMagic.Controller();
+    
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.textBoxOne',
+                duration: '57%'
+            })
+            .setClassToggle('#step1', 'appear')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.textBoxTwo',
+                duration: '39%'
+            })
+            .setClassToggle('#step2', 'appear')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '.textBoxThree',
+                duration: '59%'
+            })
+            .setClassToggle('#step3', 'appear')
+            .addTo(controller);
+        });
+</script>
 
 <%- include("partials/footer.ejs") %>
 </div>
