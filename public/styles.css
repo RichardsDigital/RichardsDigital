@@ -81,11 +81,11 @@ nav ul :nth-child(1) {
     justify-self: left;
 }
 
-nav ul :nth-child(n+3) {
+nav ul :nth-child(n+2) {
     height: 30px;
 }
 
-nav ul :nth-child(n+7) {
+nav ul :nth-child(n+6) {
     height: 22px;
     justify-self: right;
 }
@@ -142,6 +142,7 @@ nav ul :nth-child(n+7) {
 .contactInfoBoxSN p {
     color: white;
     font-size: 14px;
+    line-height: normal;
 }
 .contactInfoBoxSN img {
     width: 16px;
@@ -185,7 +186,7 @@ nav ul :nth-child(n+7) {
 /* Mobile nav screen settings */
 
 @media only screen and (max-width: 991px) {
-    nav ul :nth-child(n+3) {
+    nav ul :nth-child(n+2) {
         display: none;
     }
     .undernav {
@@ -197,10 +198,9 @@ nav ul :nth-child(n+7) {
         width: 100%;
     }
     .hamburger {
-        width: 30px;
-        grid-column: 3/4;
-        justify-self: right;
-        align-self: center;
+        position: absolute;
+        right: 0;
+        padding: 30px;
     }
     nav ul :nth-child(1) {
         grid-column: 2/3;

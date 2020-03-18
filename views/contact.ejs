@@ -9,10 +9,10 @@
 .undernav div {
     grid-column: 6/7;
 }
-nav ul :nth-child(6) {
+nav ul :nth-child(5) {
     opacity: 100%;
 }
-nav ul :nth-child(6):hover {
+nav ul :nth-child(5):hover {
     opacity: 100%;
 }
 .list :nth-child(4){
@@ -26,9 +26,9 @@ nav ul :nth-child(6):hover {
             <h2 class="header-textbox">Get in touch!</h2>
             <div class="inner-contact-box">
                 <form action="/contact" method="POST">
-                    <input type="text" name="mail" placeholder="Your Email">
-                    <input type="text" name="subject" placeholder="Subject">
-                    <textarea rows="20" cols="40" name="message" placeholder="Message"></textarea>
+                    <input type="text" name="mail" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea rows="20" cols="40" name="message" placeholder="Message" required></textarea>
                     <button type="submit" name="submit"><h4>Send</h4></button>
                 </form>
             </div>

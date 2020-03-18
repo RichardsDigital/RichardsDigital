@@ -7,22 +7,30 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburgers.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
+        <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
         <ul>
             <img src="images/Richards-Digital-logo.png" onclick="location.href='/'" alt="">
-            <img class="hamburger" src="images/icons/menu.png" alt="">
+            <!-- <img class="hamburger" src="images/icons/menu.png" alt=""> -->
+
             <a href="/">Home</a>
             <a href="/portfolio">Portfolio</a>
             <a href="/getting-started">Getting Started</a>
             <a href="/contact">Contact</a>
-            <img src="images/icons/linkedin1.png" alt="">
-            <img src="images/icons/facebook1.png" alt="">
-            <img src="images/icons/instagram1.png" alt="">
+            
+            <img src="images/icons/linkedin1.png" alt="" onclick="window.open('https://www.linkedin.com/in/daniel-richards-59b6801a4/')">
+            <img src="images/icons/facebook1.png" alt="" onclick="window.open('https://www.facebook.com/RichardsDigital/')">
+            <img src="images/icons/instagram1.png" alt="" onclick="window.open('https://www.instagram.com/richardsdigital/')">
         </ul>
     </nav>
 
@@ -42,9 +50,9 @@
         </div>
 
         <div class="socialIconsSN">
-            <img src="images/icons/linkedin2.png" alt="">
-            <img src="images/icons/facebook2.png" alt="">
-            <img src="images/icons/instagram2.png" alt="">
+            <img src="images/icons/linkedin2.png" alt="" onclick="window.open('https://www.linkedin.com/in/daniel-richards-59b6801a4/')">
+            <img src="images/icons/facebook2.png" alt="" onclick="window.open('https://www.facebook.com/RichardsDigital/')">
+            <img src="images/icons/instagram2.png" alt="" onclick="window.open('https://www.instagram.com/richardsdigital/')">
         </div>
 
         <div class="contactInfoBoxSN">
@@ -98,10 +106,12 @@
             if (isOpen === false) {
                 openNav(carrier, sidenav);
                 isOpen = true;
+                document.getElementsByClassName('hamburger')[0].classList.add('is-active');
             } 
             else {
                 closeNav(carrier, sidenav);
                 isOpen = false;
+                document.getElementsByClassName('hamburger')[0].classList.remove('is-active');
             }
         });
         

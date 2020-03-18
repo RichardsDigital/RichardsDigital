@@ -52,5 +52,7 @@ app.post('/contact', (req, res) => {
         }
     });
 
-    res.redirect('contact');
+    res.redirect('/contact');
+
 });
+
