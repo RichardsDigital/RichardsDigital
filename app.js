@@ -2,7 +2,8 @@ const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const express = require('express');
 const app = express();
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
+const jquery = require('jquery');
 require('dotenv').config();
 
 app.set('view engine', 'ejs');
@@ -54,5 +55,3 @@ app.post('/contact', (req, res) => {
 
     res.redirect('contact');
 });
-
-

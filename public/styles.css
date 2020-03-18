@@ -222,6 +222,7 @@ footer {
 
 footer p {
     color: white;
+    line-height: normal;
 }
 
 .contactInfoBox {
@@ -299,6 +300,8 @@ a {
 p {
     font-size: 14px;
     line-height: 18px;
+    line-height: 24px;
+    opacity: 80%;
 }
 
 button {
@@ -396,11 +399,11 @@ button:hover {
     }
     30% {
         opacity: 0%;
-        left: -6%;
+        transform: translateX(-60px);
     }
     100% {
         opacity: 100%;
-        left: 0;
+        transform: translateX(0);
     }
 }
 
@@ -409,15 +412,21 @@ button:hover {
     justify-self: center;
     align-self: center;
     grid-column: 2/3;
-    padding: 50px 0 80px 60px;
+    padding: 50px 0 80px 30px;
+}
+
+.intro-textbox1 {
     animation: flowRight 1.2s;
 }
 
 .intro-textbox2 {
     padding-top: 30px;
+    animation: flowRight 1.2s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
 }
 .intro-textbox2 button {
-    margin-top: 12px;
+    margin-top: 30px;
 }
 
 .boxlinespacing1, .boxlinespacing2 {
@@ -438,49 +447,29 @@ button:hover {
     padding: 15px 15px;
 }
 
-@keyframes flowRightImg {
-    0% {
-        opacity: 0%;
-    }
-    60% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
 .features .img-1 {
     grid-column: 1/2;
     grid-row: 1/2;
-    animation: flowRightImg 1.6s;
+    animation: flowRight 1.2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
 }
 
 .features .img-2 {
     width: 60%;
     grid-column: 1/2;
     grid-row: 2/3;
-    animation: flowRightImg 1.8s;
+    animation: flowRight 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
 
 }
 .features .img-3 {
     grid-column: 1/2;
     grid-row: 3/4;
-    animation: flowRightImg 2s;
-}
-
-@keyframes flowRight2 {
-    0% {
-        opacity: 0%;
-    }
-    60% {
-        opacity: 0%;
-        margin-left: 0%;
-    }
-    100% {
-        opacity: 100%;
-        margin-left: 2%;
-    }
+    animation: flowRight 1.2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards;
 }
 
 .features-textbox1, .features-textbox2 {
@@ -489,10 +478,14 @@ button:hover {
     width: 80%;
     padding-bottom: 15px;
     margin-left: 2%;
-    animation: flowRight2 1.6s;
+    animation: flowRight 1.2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
 }
 .features-textbox2 {
-    animation: flowRight2 1.8s;
+    animation: flowRight 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
 }
 
 .features .features-textbox3 {
@@ -500,7 +493,9 @@ button:hover {
     align-self: center;
     width: 80%;
     margin-left: 2%;
-    animation: flowRight2 2s;
+    animation: flowRight 1.2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards;
 }
 }
 
@@ -637,10 +632,13 @@ button:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 30px;
+        background-color: white;
+        transition: 0.4s ease-out;
     }
-    #pBox1, #pBox3 {
+    .portfolioElementBox.fade-in {
         background-color: #eaeaea;
     }
+
     .imageSlider {
         grid-column: 1/2;
         display: grid;
@@ -733,6 +731,12 @@ button:hover {
         grid-template-rows: 1 1fr 1;
         grid-template-columns: 1;
         padding: 30px 30px;
+        background-color: white;
+        transition: 0.4s ease-out;
+    }
+
+    .portfolioElementBox.fade-in-mobile {
+        background-color: #eaeaea;
     }
 
     .mobileTitle {
@@ -756,9 +760,7 @@ button:hover {
     .portfolio-textbox1 button, .portfolio-textbox2 button, .portfolio-textbox3 button {
         display: none;
     }
-    #pBox1, #pBox3 {
-        background-color: #eaeaea;
-    }
+
     .imageSlider {
         grid-row: 2/3;
         display: grid;
@@ -834,10 +836,8 @@ button:hover {
         width: 100%;
         height: 50%;
         z-index: -1;
-        /* animation: sliderPanel 1.2s; */
+        animation: sliderPanel 1.2s;
     }
-
-    /* animation: flowRight 1.2s; */
 
     .next-steps-textbox h3 {
         display: none;
@@ -879,26 +879,14 @@ button:hover {
         grid-column: 2/3;
         width: 90%;
         align-self: center;
-        /* animation: flowRight 1.4s; */
-    }
-
-    @keyframes flowRight3 {
-        0% {
-            opacity: 0%;
-        }
-        60% {
-            opacity: 0%;
-            margin-left: 0;
-        }
-        100% {
-            opacity: 100%;
-            margin-left: 30px;
-        }
+        animation: flowRight 1.2s;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
     }
 
     .getting-started-textbox {
         grid-column: 1/2;
-        /* animation: flowRight3 1.2s; */
+        animation: flowRight 1.2s;
         margin-left: 30px;
     }
 
@@ -909,7 +897,9 @@ button:hover {
 
     .our-process-textbox {
         padding: 30px 30px 30px 0;
-        /* animation: flowRight3 1.2s; */
+        animation: flowRight 1.2s;
+        animation-delay: 0.8s;
+        animation-fill-mode: backwards;
         margin-left: 30px;
     }
 
@@ -923,15 +913,21 @@ button:hover {
         grid-template-columns: 1fr 1fr;
         padding: 0 0 15px 0;
         margin-left: 30px;
-        /* animation: flowRight3 1.6s; */
+        animation: flowRight 1.2s;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
     }
-    /* .textBoxTwo {
-        animation: flowRight3 1.8s;
+    .textBoxTwo {
+        animation: flowRight 1.2s;
+        animation-delay: 1.2s;
+        animation-fill-mode: backwards;
     }
     
     .textBoxThree {
-        animation: flowRight3 2s;
-    } */
+        animation: flowRight 1.2s;
+        animation-delay: 1.4s;
+        animation-fill-mode: backwards;
+    }
 
     .textBox {
         align-self: top;
@@ -942,16 +938,10 @@ button:hover {
         align-self: center;
         grid-column: 2/3;
         width: 300px;
-        /* animation: flowRightImg 1.6s; */
     }
 
     .textBoxTwo img {
         width: 80px;
-        /* animation: flowRightImg 1.8s; */
-    }
-
-    .textBoxThree img {
-        /* animation: flowRightImg 2s; */
     }
 
     .sectionThree {
@@ -966,12 +956,12 @@ button:hover {
     }
 
     .buttonArea {
-        grid-column: 2/3;
+        grid-column: 1/2;
         display: flex;
         align-items: center;
     }
     .buttonArea button {
-        margin-left: 20%;
+        margin-left: 30px;
     }
 }
 

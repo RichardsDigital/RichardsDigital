@@ -23,7 +23,7 @@ nav ul :nth-child(4):hover {
 <section class="portfolio">
 
 <h2 class="header" style="padding: 30px;">Portfolio</h2>
-<h3 class="mobile-header-title">Portfolio</h3>
+<h3 class="mobile-header-title" style="padding: 30px;">Portfolio</h3>
 
 <div class="portfolioElements">
 
@@ -56,7 +56,7 @@ nav ul :nth-child(4):hover {
         </div>
     </div>
 
-    <div class="portfolioElementBox">
+    <div class="portfolioElementBox" id="pBox2">
 
         <h4 class="mobileTitle">Gym Lion</h4>
 
@@ -114,7 +114,7 @@ nav ul :nth-child(4):hover {
         </div>
     </div>
 
-    <div class="portfolioElementBox">
+    <div class="portfolioElementBox" id="pBox4">
 
         <h4 class="mobileTitle">Bloom Therapy</h4>
 
@@ -264,8 +264,76 @@ nav ul :nth-child(4):hover {
                     image.src = updatedImage;
                 }
         }
-
     </script>
+    
+    <script>
+
+            document.addEventListener("DOMContentLoaded", () => {
+            var controller = new ScrollMagic.Controller();
+    
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox1',
+                duration: '48.6%'
+            })
+            .setClassToggle('#pBox1', 'fade-in')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox2',
+                duration: '48.6%'
+            })
+            .setClassToggle('#pBox2', 'fade-in')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox3',
+                duration: '48.6%'
+            })
+            .setClassToggle('#pBox3', 'fade-in')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox4',
+                duration: '48.6%'
+            })
+            .setClassToggle('#pBox4', 'fade-in')
+            .addTo(controller);
+
+            
+            // Mobile
+
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox1',
+                duration: '68%'
+            })
+            .setClassToggle('#pBox1', 'fade-in-mobile')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox2',
+                duration: '68%'
+            })
+            .setClassToggle('#pBox2', 'fade-in-mobile')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox3',
+                duration: '68%'
+            })
+            .setClassToggle('#pBox3', 'fade-in-mobile')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox4',
+                duration: '68%'
+            })
+            .setClassToggle('#pBox4', 'fade-in-mobile')
+            .addTo(controller);
+        });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 </div>
 
 </section>
