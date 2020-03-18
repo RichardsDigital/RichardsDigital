@@ -5,10 +5,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.scrollContainer {
-    height: 100%;
-    width: 100%;
-}
 
 /* Header and Footer ---------------------------------------- */
 
@@ -74,11 +70,11 @@ nav ul {
 }
 
 nav ul a {
-    opacity: 50%;
+    opacity: 0.5;
     padding-top: 12px;
 }
 nav ul a:hover {
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 nav ul :nth-child(1) {
@@ -119,7 +115,7 @@ nav ul :nth-child(n+6) {
     padding: 20px 0 20px 0;
     margin-left: 40px;
     width: 300px;
-    opacity: 50%;
+    opacity: 0.5;
 }
 
 .sidenav .list {
@@ -170,7 +166,7 @@ nav ul :nth-child(n+6) {
 .contactInfoBoxSN .copyright {
     font-size: 12px;
     position: relative;
-    opacity: 40%;
+    opacity: 0.4;
     bottom: 30px;
     top: 80px;
 }
@@ -237,7 +233,7 @@ footer p {
 }
 
 .contactInfoBox img {
-    width: 16px;
+    height: 16px !important;
 }
 .contactInfoBox .phoneNumberBox {
     display: flex;
@@ -259,7 +255,7 @@ footer p {
     right: 0;
 }
 .socialMediaIcons img {
-    width: 22px;
+    height: 22px !important;
     padding: 0 16px;
 }
 .socialMediaIcons :nth-child(3) {
@@ -269,7 +265,7 @@ footer p {
 .contactInfoBox .copyright {
     font-size: 14px;
     position: absolute;
-    opacity: 40%;
+    opacity: 0.4;
     bottom: 30px;
 }
 
@@ -308,7 +304,7 @@ p {
     font-size: 14px;
     line-height: 18px;
     line-height: 24px;
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 button {
@@ -322,7 +318,7 @@ button {
     border: none;
 }
 button:hover {
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 /* Textbox Preset */
@@ -356,14 +352,14 @@ button:hover {
 /* Home ----------------------------------------------------------------------------------------- */
 @keyframes flowRight {
     0% {
-        opacity: 0%;
+        opacity: 0;
     }
     30% {
-        opacity: 0%;
+        opacity: 0;
         transform: translateX(-60px);
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -516,7 +512,7 @@ button:hover {
     #para1.appear, #para2.appear, #para3.appear, 
     #step1.appear, #step2.appear, #step3.appear,
     #portPara1.appear, #portPara2.appear, #portPara3.appear {
-        opacity: 100%;
+        opacity: 1;
         transform: translateY(0);
     }
 
@@ -704,7 +700,7 @@ button:hover {
     .imageSlider .left img, .imageSlider .right img {
         height: 18px;
         width: 18px;
-        opacity: 20%;
+        opacity: 0.2;
     }
     
     .left:active {
@@ -830,7 +826,7 @@ button:hover {
     .imageSlider .left img, .imageSlider .right img {
         height: 18px;
         width: 18px;
-        opacity: 20%;
+        opacity: 0.2;
     }
     
     .left:active {
@@ -1138,7 +1134,7 @@ button:hover {
         background-color: rgba(53, 53, 53, 1);
         justify-self: center;
         align-self: center;
-        opacity: 20%;
+        opacity: 0.2;
         margin: 15px;
     }
 
@@ -1173,7 +1169,7 @@ button:hover {
         background-color: rgba(53, 53, 53, 1);
         justify-self: center;
         align-self: center;
-        opacity: 20%;
+        opacity: 0.2;
         margin: 30px;
     }
 
@@ -1237,7 +1233,7 @@ button:hover {
         grid-column: 2/3;
         width: 3px;
         background-color: #cccccc;
-        opacity: 50%;
+        opacity: 0.5;
     }
     .right-side {
         grid-column: 3/4;
@@ -1254,7 +1250,7 @@ button:hover {
     }
     .right-side li {
         margin-bottom: 15px;
-        opacity: 70%;
+        opacity: 0.7;
     }
 
 }
