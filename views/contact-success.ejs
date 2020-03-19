@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>
+
+<div class="navspace"></div>
+
+<div class="carrier">
+    <div class="slider">
+
+<style>
+.undernav div {
+    grid-column: 6/7;
+}
+nav ul :nth-child(5) {
+    opacity: 1;
+}
+nav ul :nth-child(5):hover {
+    opacity: 1;
+}
+.list :nth-child(4){
+    opacity: 1;
+}
+</style>
+
+<section class="contact">
+    <div class="outerContactBox">
+        <div class="left-side">
+            <h2 class="header-textbox" style="width: 400px;">Your message has been sent!</h2>
+            <div class="inner-contact-box">
+                <form action="/contact" method="POST" style="opacity: 0.6;">
+                    <input type="text" name="mail" placeholder="Your Email" disabled>
+                    <input type="text" name="subject" placeholder="Subject" disabled>
+                    <textarea rows="20" cols="40" name="message" placeholder="Message" required disabled></textarea>
+                    <button type="submit" name="submit" disabled><h4>Send</h4></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="middle-line"></div>
+
+        <div class="right-side">
+            <h2 class="header-textbox">Follow Us</h2>
+            <div class="social-links">
+                <ul>
+                    <li><h4>Linkedin</h4></li>
+                    <li><h4>Facebook</h4></li>
+                    <li><h4>Instagram</h4></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
+</div>
+</div>
