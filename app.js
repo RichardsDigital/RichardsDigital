@@ -45,6 +45,7 @@ app.post('/contact', (req, res) => {
     transporter.sendMail(mailOptions, function(err, data) {
         if (err) {
             console.log(err);
+            res.render('contact-unsuccessful');
         } else {
             res.render('contact-success');
         }

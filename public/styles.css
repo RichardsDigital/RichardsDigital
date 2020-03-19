@@ -183,6 +183,13 @@ nav ul :nth-child(n+6) {
     .whiteSpace {
         display: none;
     }
+
+    .social-links ul li {
+        transition: 0.4s;
+    }
+    .social-links ul li:hover {
+        transform: translateX(5px);
+    }
 }
 
 /* Mobile nav screen settings */
