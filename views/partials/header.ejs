@@ -83,19 +83,15 @@
             
             function openNav(carrier, sidenav) {
 
-                carrier.style.left = '-340px';
-                carrier.style.right = '340px';
-                sidenav.style.width = '340px';
-                
-                document.getElementsByClassName('allElements')[0].style.opacity = '1';
+                carrier.style.transform = 'translateX(-340px)'
+                sidenav.style.transform = 'translateX(0)';
+                // document.getElementsByClassName('allElements')[0].style.opacity = '1';
             }
 
             function closeNav(carrier, sidenav) {
-                
-                carrier.style.left = '0';
-                carrier.style.right = '0';
-                sidenav.style.width = '0';
-                document.getElementsByClassName('allElements')[0].style.opacity = '0';
+                carrier.style.transform = 'translateX(0)'
+                sidenav.style.transform = 'translateX(340px)';
+                // document.getElementsByClassName('allElements')[0].style.opacity = '0';
             }
         
         document.getElementsByClassName('hamburger')[0].addEventListener('click', () => {
