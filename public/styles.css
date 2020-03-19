@@ -996,9 +996,12 @@ button:hover {
 
     .sectionThree {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         background-color: #eaeaea;
         padding-bottom: 55px;
+    }
+    .sectionThree p {
+        width: 90%;
     }
 
     .next-steps-textbox {
