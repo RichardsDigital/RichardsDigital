@@ -134,7 +134,7 @@ nav ul :nth-child(3):hover {
         </div>  
         <div class="header-textbox portfolio-textbox1">
             <h3>Bloom Therapy</h3>
-            <p>Taking a softer approach. This template makes use of a light weight design 
+            <p id="portPara4">Taking a softer approach. This template makes use of a light weight design 
                 that can gather a wide range of services and present them in an easy and 
                 presentable manner. Also supported with features to handle online bookings and more.</p>
                <!-- <button>Visit Site</button> -->
@@ -271,28 +271,28 @@ nav ul :nth-child(3):hover {
     
             var ourScene = new ScrollMagic.Scene({
                 triggerElement: '#pBox1',
-                duration: '42%'
+                duration: '35%'
             })
             .setClassToggle('#pBox1', 'fade-in')
             .addTo(controller);
 
             var ourScene = new ScrollMagic.Scene({
                 triggerElement: '#pBox2',
-                duration: '42%'
+                duration: '35%'
             })
             .setClassToggle('#pBox2', 'fade-in')
             .addTo(controller);
 
             var ourScene = new ScrollMagic.Scene({
                 triggerElement: '#pBox3',
-                duration: '42%'
+                duration: '35%'
             })
             .setClassToggle('#pBox3', 'fade-in')
             .addTo(controller);
 
             var ourScene = new ScrollMagic.Scene({
                 triggerElement: '#pBox4',
-                duration: '42%'
+                duration: '35%'
             })
             .setClassToggle('#pBox4', 'fade-in')
             .addTo(controller);
@@ -350,6 +350,13 @@ nav ul :nth-child(3):hover {
                 duration: '68%'
             })
             .setClassToggle('#portPara3', 'appear')
+            .addTo(controller);
+
+            var ourScene = new ScrollMagic.Scene({
+                triggerElement: '#pBox4',
+                duration: '68%'
+            })
+            .setClassToggle('#portPara4', 'appear')
             .addTo(controller);
         });
     </script>

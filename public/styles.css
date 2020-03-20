@@ -514,15 +514,15 @@ button:hover {
 /* Mobile Screen Settings */
 @media only screen and (max-width: 700px) {
 
-    #para1, #para2, #para3, #step1, #step2, #step3, #portPara1, #portPara2, #portPara3 {
+    #para1, #para2, #para3, #step1, #step2, #step3, #portPara1, #portPara2, #portPara3, #portPara4 {
         opacity: 0;
         transform: translateY(7.5px);
         transition: 0.8s;
     }
     
-    #para1.appear, #para2.appear, #para3.appear, 
+    #para1.appear, #para2.appear, #para3.appear, #para3.appear,
     #step1.appear, #step2.appear, #step3.appear,
-    #portPara1.appear, #portPara2.appear, #portPara3.appear {
+    #portPara1.appear, #portPara2.appear, #portPara3.appear, #portPara4.appear {
         opacity: 1;
         transform: translateY(0);
     }
@@ -665,7 +665,7 @@ button:hover {
 
 /* Desktop Screen Settings */
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 802px) {
     .portfolioElementBox.fade-in {
         background-color: #e4e4e4;
     }
@@ -684,7 +684,7 @@ button:hover {
     .portfolioElementBox {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 30px;
+        padding: 30px 0px 30px 30px;
         background-color: white;
         transition: 0.8s ease-out;
     }
@@ -755,7 +755,7 @@ button:hover {
         grid-column: 2/3;
         align-self: top;
         justify-self: center;
-        width: 90%;
+        /* width: 90%; */
     }
     
 }
