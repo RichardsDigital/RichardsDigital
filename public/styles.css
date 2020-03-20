@@ -665,6 +665,12 @@ button:hover {
 
 /* Desktop Screen Settings */
 
+@media only screen and (min-width: 850px) {
+    .portfolioElementBox.fade-in {
+        background-color: #e4e4e4;
+    }
+}
+
 @media only screen and (min-width: 701px) {
 
     .mobileTitle {
@@ -681,9 +687,6 @@ button:hover {
         padding: 30px;
         background-color: white;
         transition: 0.8s ease-out;
-    }
-    .portfolioElementBox.fade-in {
-        background-color: #e4e4e4;
     }
 
     .imageSlider {
