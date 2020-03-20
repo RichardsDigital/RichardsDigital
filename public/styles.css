@@ -1206,7 +1206,7 @@ button:hover {
 
     .outerContactBox {
         display: grid;
-        grid-template-columns: 1fr 2px 35%;
+        grid-template-columns: 1fr 2px 30%;
     }
     .left-side {
         grid-column: 1/2;
