@@ -4,10 +4,12 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+const sslRedirect = require('heroku-ssl-redirect');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(sslRedirect());
 
 app.listen(process.env.PORT || 3000);
 
