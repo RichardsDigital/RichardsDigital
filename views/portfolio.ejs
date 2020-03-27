@@ -154,6 +154,9 @@ nav ul :nth-child(3):hover {
         var count2 = 1;
         var count3 = 1;
         var count4 = 1;
+
+        //Create editable file name
+        var imageFile = image.src.slice(0, -5);
         
         function handleClick(e) {
 
@@ -166,8 +169,6 @@ nav ul :nth-child(3):hover {
             var arrowRight2 = document.getElementById(parent).getElementsByTagName('img')[2];
             var arrowRight3 = document.getElementById(parent).getElementsByTagName('img')[2];
             var arrowRight4 = document.getElementById(parent).getElementsByTagName('img')[2];
-            //Create editable file name
-            var imageFile = image.src.slice(0, -5);
 
             var buttonName = e.name;
 

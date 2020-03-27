@@ -71,7 +71,7 @@ nav ul a:hover {
 }
 
 nav ul :nth-child(1) {
-    height: 24px;
+    height: 34px;
     grid-column: 2/3;
     justify-self: left;
 }
