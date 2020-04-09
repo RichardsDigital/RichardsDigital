@@ -24,9 +24,15 @@
             <img src="images/icons/instagram2.png" alt="">
         </div>
 
-    <p class="copyright">
-        © 2020 Richards Digital.
-    </p>
+    <p class="copyright"></p>
+
+    <script>
+        var currentDate = new Date();
+        var thisYear = currentDate.getFullYear();
+        for (var i=0; i<2; i++) {
+            document.getElementsByClassName("copyright")[i].innerHTML = "© " + thisYear + " Richards Digital.";
+        };
+    </script>
 
     </div>
 
