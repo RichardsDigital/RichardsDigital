@@ -41,7 +41,7 @@ app.post('/contact', (req, res) => {
         from: req.body.mail,
         to: 'richardsdigital.info@gmail.com',
         subject: req.body.subject,
-        text: req.body.message
+        text: `From: ${req.body.mail} | ${req.body.message}`
     };
 
     transporter.sendMail(mailOptions, function(err, data) {
