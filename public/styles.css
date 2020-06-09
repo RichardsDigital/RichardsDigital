@@ -375,6 +375,14 @@ button:hover {
         transform: translateX(0);
     }
 }
+@keyframes glowOp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /* Desktop Screen Settings */
 
 @media only screen and (min-width: 701px) {
@@ -389,7 +397,9 @@ button:hover {
         width: 100%;
         display: flex;
         justify-content: center;
-        background-color: white;
+        background-color: black;
+        opacity: 1;
+        animation: glowOp 1.4s;
     }
 
 .introduction {
@@ -537,10 +547,12 @@ button:hover {
     }
     .RDBanner {
         width: 100%;
-        padding: 50px 0;
+        margin: 50px 0;
         display: flex;
         justify-content: center;
-        background-color: white;
+        background-color: black;
+        opacity: 1;
+        animation: glowOp 1.4s;
     }
 
     #para1, #para2, #para3, #step1, #step2, #step3, #portPara1, #portPara2, #portPara3, #portPara4 {
