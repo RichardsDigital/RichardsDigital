@@ -26,6 +26,7 @@ nav {
     width: 100%;
     align-items: center;
     z-index: 2;
+    box-shadow: 0 0 1px rgb(161, 160, 160), 0 0 4px rgb(170, 170, 170);
 }
 
 .undernav {
@@ -375,7 +376,21 @@ button:hover {
     }
 }
 /* Desktop Screen Settings */
+
 @media only screen and (min-width: 701px) {
+
+    .RDBanner :nth-child(2) {
+        display: none;
+    }
+    .RDBanner img {
+        width: 100%;
+    }
+    .RDBanner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
 
 .introduction {
     background-color: transparent;
@@ -513,6 +528,20 @@ button:hover {
 
 /* Mobile Screen Settings */
 @media only screen and (max-width: 700px) {
+
+    .RDBanner :nth-child(1) {
+        display: none;
+    }
+    .RDBanner img {
+        width: 100%;
+    }
+    .RDBanner {
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
 
     #para1, #para2, #para3, #step1, #step2, #step3, #portPara1, #portPara2, #portPara3, #portPara4 {
         opacity: 0;
