@@ -414,7 +414,7 @@ button:hover {
     position: absolute;
     background-color: #eaeaea;
     width: 100%;
-    height: 60%;
+    height: 56%;
     z-index: -1;
     animation: sliderPanel 1.2s;
 }
