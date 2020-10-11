@@ -540,16 +540,17 @@ button:hover {
 /* Mobile Screen Settings */
 @media only screen and (max-width: 700px) {
 
-    .RDBanner :nth-child(1) {
+    .RDBanner {
         display: none;
     }
     .RDBanner img {
         width: 100%;
         height: auto;
+        display: none;
     }
     .RDBanner {
         width: 100%;
-        margin: 50px 0;
+        /* margin: 50px 0; */
         display: flex;
         justify-content: center;
         background-color: black;
